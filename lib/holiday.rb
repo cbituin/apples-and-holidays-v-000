@@ -86,12 +86,13 @@ def all_holidays_with_bbq(holiday_hash)
     # binding.pry
       details_hash.each do |holiday, supplies|
         if supplies.include?("BBQ")
-          return holiday
+          bbq_holidays << holiday
         else
           nil
         end
       end
     end
+    bbq_holidays
 end
 
 

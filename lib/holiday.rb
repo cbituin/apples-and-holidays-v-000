@@ -74,7 +74,7 @@ def all_supplies_in_holidays(holiday_hash)
     details_hash.each do |holiday, supplies|
       # binding.pry
       holiday_formatted = 
-      puts "  #{holiday.to_s.sub(/_{1,}/, " ").split.map(&:capitalize).join(' ')}: #{supplies.join(", ")}"
+      puts "  #{holiday.to_s.gsub(/[_]/, " ").split.map(&:capitalize).join(' ')}: #{supplies.join(", ")}"
     end
   end
 
